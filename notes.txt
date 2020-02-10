@@ -1,0 +1,44 @@
+Overview:
+We'd like there to be a portal for employees to be able to submit suggestions and/or complains to HR (Tim). Should have a notification feature where it'll alert Tim via email that there is a submission awaiting review/response within the HR portal.
+
+Additional feature (bonus):
+We'd also like there to be an option for users to post suggestions/complains privately or post it to a general board.
+
+Timeline: 3 weeks
+
+This will be in another droplet/subdomain under the theoremadvertising.com domain - I can get that setup after you're completed so don't worry about that 🙂
+
+
+specs:
+
+submit suggestions/complaints to db
+notification when new db
+flag resolved/not-resolved
+private/public flag
+individual users
+auth
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
