@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import constants from './../constants';
+const { initialState, types, firebaseConfig } = constants;
 
 const TestComponent = (props) => {
 

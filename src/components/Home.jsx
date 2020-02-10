@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import NewMessageForm from './NewMessageForm';
+import constants from './../constants';
+const { initialState, types, firebaseConfig } = constants;
 
 
 const Home = ({testState}) => {
@@ -23,6 +26,7 @@ const Home = ({testState}) => {
       `}</style>
       <h1>Home</h1>
       <p>{testState}</p>
+      <NewMessageForm />
     </div>
   );
 };

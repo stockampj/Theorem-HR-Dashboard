@@ -3,6 +3,8 @@ import { connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import { changeState1, changeState2 } from '../actions';
 import PropTypes from 'prop-types';
+import constants from './../constants';
+const { initialState, types, firebaseConfig } = constants;
 
 const NavBar = (props) => {
 

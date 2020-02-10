@@ -3,6 +3,8 @@ import { Switch, Route } from 'react-router-dom';
 import NavBar from './NavBar';
 import Home from './Home';
 import TestComponent from './TestComponent';
+import constants from './../constants';
+const { initialState, types, firebaseConfig } = constants;
 
 
 function App(){
