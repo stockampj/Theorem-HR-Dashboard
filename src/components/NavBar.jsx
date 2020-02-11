@@ -78,8 +78,8 @@ const NavBar = (props) => {
       `}</style>
       <div className='top-nav-row'>
         <div className='nav-cluster'>
-          <Link className='btn home-button' to='/'><span className="btn-text">Home</span></Link>
-          <Link className='btn nav-item' to="/ticketviewer">Ticket Viewer</Link>
+          <Link className='btn home-button' to='/'><span className="btn-text">Messages</span></Link>
+          <Link className='btn nav-item' to="/messageform">New Message</Link>
         </div>
         <div className='nav-cluster'>
           <button className='btn nav-item' onClick={()=>{handleTestClick();}}>click me now</button>

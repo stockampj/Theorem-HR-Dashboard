@@ -5,6 +5,7 @@ import Home from './Home';
 import TestComponent from './TestComponent';
 import MessageViewer from './MessageViewer';
 import constants from './../constants';
+import NewMessageForm from './NewMessageForm';
 const { initialState, types, firebaseConfig } = constants;
 
 
@@ -14,8 +15,8 @@ function App(){
       <h1>Hello</h1>
       <NavBar />
       <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/ticketviewer' component={MessageViewer} />
+        <Route exact path='/'  component={MessageViewer}/>
+        <Route exact path='/messageform' component={NewMessageForm} />
       </Switch>
     </div>
   );

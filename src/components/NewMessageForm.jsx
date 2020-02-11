@@ -14,18 +14,42 @@ function NewMessageForm(props){
     _message.value = '';
   };
   return (
-    <div>
+    <div className="message-form">
+      <style>{`
+        .message-form {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          flex-direction: column;
+          top:0px;
+          left: 0px;
+          height: 100vh;
+          width: 100vw;
+          background-color: rgba(50,100,0,1)
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          justify: left;
+        }
+        .form-field {
+          margin: 10px;
+        }
+      `}</style>
       <form onSubmit={handleNewMessageFormSubmission}>
         <input
+          className='form-field'
           type='text'
           id='user'
           placeholder='user'
           ref={(input) => {_user = input;}}/>
         <textarea
+          className='form-field'
           id='message'
           placeholder='message.'
           ref={(textarea) => {_message = textarea;}}/>
-        <button type='submit'>Submit</button>
+        <button className='form-field' type='submit'>Submit</button>
       </form>
     </div>
   );

@@ -3,6 +3,8 @@ import { connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import * as actions from './../actions';
 import constants from './../constants';
+import Message from './Message';
+
 const { initialState, types, firebaseConfig } = constants;
 
 class MessageViewer extends React.Component {
@@ -11,40 +13,65 @@ class MessageViewer extends React.Component {
     const { watchFirebaseMessagesRef } = actions;
     dispatch(watchFirebaseMessagesRef());
   }
-
   render(){
+    const messages = this.props.messages
     return (
       <div className='MessageViewer'>
         <style jsx>{`
           .MessageViewer {
             display: flex;
-            justify-content: center;
+            justify-content: top;
             align-items: center;
+            flex-direction: column;
             position: absolute;
+            padding-top: 8vh;
             top:0px;
             left: 0px;
             height: 100vh;
             width: 100vw;
             background-color: rgba(100,0,150,1)
           }
+          .message-list-display {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+            background: rgba(255,255,255,.2);
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: scroll;
+          }
   
         `}</style>
-        <h1>Test Component</h1>
+        <h1>Messages</h1>
+        <div className='message-list-display'>
+          {
+            Object.keys(messages).map((key)=>{
+              console.log('hello')
+              let {isResolved, message, timeOpen, user, id} = messages[key];
+              return <Message 
+                isResolved={isResolved}
+                message={message}
+                timeOpen={timeOpen}
+                user={user}
+                id={id}
+              />;
+            })    
+          }
+        </div>
       </div>
     );
   }
 }
 
-
-
 MessageViewer.propTypes = {
-  testState: PropTypes.string
+  messages: PropTypes.object
 };
 
 
 const mapStateToProps = (state) => {
   return {
-    testState: state.testState
+    messages: state.messages
   };
 };
 

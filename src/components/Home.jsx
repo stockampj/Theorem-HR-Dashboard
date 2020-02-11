@@ -26,7 +26,6 @@ const Home = ({testState}) => {
       `}</style>
       <h1>Home</h1>
       <p>{testState}</p>
-      <NewMessageForm />
     </div>
   );
 };
