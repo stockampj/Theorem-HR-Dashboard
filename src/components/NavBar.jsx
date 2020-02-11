@@ -14,7 +14,7 @@ const NavBar = (props) => {
     if (testState !== 'Huzzah'){
       dispatch(changeState1('Huzzah'));
     } else {
-      dispatch(changeState2('Wonga'));
+      dispatch(changeState1('Wonga'));
     }
   };
 
@@ -79,7 +79,7 @@ const NavBar = (props) => {
       <div className='top-nav-row'>
         <div className='nav-cluster'>
           <Link className='btn home-button' to='/'><span className="btn-text">Home</span></Link>
-          <Link className='btn nav-item' to="/testPath">testLink</Link>
+          <Link className='btn nav-item' to="/ticketviewer">Ticket Viewer</Link>
         </div>
         <div className='nav-cluster'>
           <button className='btn nav-item' onClick={()=>{handleTestClick();}}>click me now</button>

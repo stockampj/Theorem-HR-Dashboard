@@ -1,2 +1,3 @@
 export const CHANGE_STATE1 = 'CHANGE_STATE1';
 export const CHANGE_STATE2 = 'CHANGE_STATE2';
+export const RECEIVE_MESSAGE = 'RECEIVE_MESSAGE';
