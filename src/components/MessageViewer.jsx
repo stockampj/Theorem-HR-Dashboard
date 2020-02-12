@@ -47,7 +47,6 @@ class MessageViewer extends React.Component {
         <div className='message-list-display'>
           {
             Object.keys(messages).map((key)=>{
-              console.log('hello')
               let {isResolved, message, timeOpen, user, id} = messages[key];
               return <Message 
                 isResolved={isResolved}
@@ -55,6 +54,7 @@ class MessageViewer extends React.Component {
                 timeOpen={timeOpen}
                 user={user}
                 id={id}
+                key={id}
               />;
             })    
           }
